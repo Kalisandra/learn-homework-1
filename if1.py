@@ -19,7 +19,21 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+    person_age = int(input('Пожалуйста, введите ваш возраст '))
+    def sort_of_activity(age):
+        if age <= 7:
+            return 'Вы посещате детский сад'
+        elif 7 < age <= 18:
+            return 'Вы учитесь в школе'
+        elif 18 < age <= 23:
+            return 'Вы учитесь в ВУЗе'
+        else:
+            return 'Вы работаете'
+    current_activity = sort_of_activity(person_age)
+    print(current_activity)
+
+
+
 
 if __name__ == "__main__":
     main()
